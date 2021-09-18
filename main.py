@@ -1,8 +1,3 @@
-#   objective 3
-
-#   1.  patern matching, our password should have atleast one caps, number, special charcater
-#   2.  introduce colors
-
 
 import re
 

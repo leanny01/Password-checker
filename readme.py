@@ -12,18 +12,18 @@
 #   5. string formating style going forward
 
 #   objective 3
+
 #   1.  patern matching, our password should have atleast one caps, number, special charcater
 #   2.  introduce colors
 
+#. *** Assignment ****
+
 #   objective 4
-
-#   1. fix all the issues including: success message, summary text, and
-#   error message displaying simultaneously( they should not)
-
-#   objective 5
 
 #   1. repeat until the correct password is entered
 
-# objective 6
+#   objective 5
 
-# 1. break the code into functions ( sepation of concern)
+#   1. break the code into functions ( sepation of concern)
+
+# add hide password per input will be a bonus.
