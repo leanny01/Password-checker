@@ -1,12 +1,16 @@
-#   objective 2
+#   objective 3
 
-#   1. ask the user to repeat the password
-#   2. check if the first password matches the second one
-#   3. display a message if the password do not match,
-#   4. display an error message if the username is less or equal to two letter long
-#   5. string formating style going forward
+#   1.  patern matching, our password should have atleast one caps, number, special charcater
+#   2.  introduce colors
 
 
+import re
+
+class bcolors:
+    OK = '\033[92m' #GREEN
+    WARNING = '\033[93m' #YELLOW
+    FAIL = '\033[91m' #RED
+    RESET = '\033[0m' #RESET COLOR
 
 username = input("Please input your username:        \t")
 password = input("Please input your password:        \t")
@@ -21,15 +25,34 @@ if len(username) <= 2:
 
 if password != passwordConf :
   flag += 1 
-  print("Your passwords do not match!")
+  print(f"{bcolors.FAIL}Your passwords do not match! {bcolors.RESET}")
+
+if not re.search("[A-Z]",password):
+  flag +=1
+  print(f"{bcolors.FAIL}Password should have atleast one capital letter!{bcolors.RESET}")
+
+if not re.search("[a-z]",password):
+  flag +=1
+  print(f"{bcolors.FAIL}Password should have atleast one lowercase!{bcolors.RESET}")
+
+if not re.search("[0-9]",password):
+  flag +=1
+  print(f"{bcolors.FAIL}Password should have atleast one number!{bcolors.RESET}")
+
+if not re.search("[$&+,:;=?@#|'<>.^*()%!-]",password):
+  flag +=1
+  print(f"{bcolors.FAIL}Password should atleast one special character including $&+,:;=?@#|'<>.^*()%!-!{bcolors.RESET}")
+
+
 
 print("\n")
 
-print(f"We have found {flag} flag(s)")
+print(f"{bcolors.WARNING}We have found {flag} flag(s){bcolors.RESET}")
 
 print("\n")
 
 if not flag :
-  print(f"Hey, { username } your password { len(password) * '*' } is {len(password)} letters long.")
+ 
+  print(f"{bcolors.OK}Hey, { username } You have successfully registered 😀!\n your password { len(password) * '*' } is {len(password)} letters long.{bcolors.RESET}")
   
 
