@@ -19,7 +19,7 @@
 
 #   objective 4
 
-#   1. Repeat until the correct password is entered
+#   1. Repeat the request for the correct username and password until the correct         details are entered
 
 #   objective 5
 
