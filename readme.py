@@ -16,14 +16,12 @@
 #   1.  patern matching, our password should have atleast one caps, number, special charcater
 #   2.  introduce colors
 
-#. *** Assignment ****
 
 #   objective 4
 
-#   1. repeat until the correct password is entered
+#   1. Repeat until the correct password is entered
 
 #   objective 5
 
-#   1. break the code into functions ( sepation of concern)
-
-# add hide password per input will be a bonus.
+#   1. Break the code into functions ( separation of concern)
+#   2. adding a hidden password per input is a bonus.
